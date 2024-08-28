@@ -1,0 +1,11 @@
+/.vs
+/*/bin
+/*/obj
+/MobileWeb/.vscode
+/MobileWeb/node_modules
+/PCWeb/.vscode
+/PCWeb/node_modules
+/WechatWeb/.vscode
+/WechatWeb/node_modules
+/WechatWeb/miniprogram_npm
+/EasyWechatWeb/upload
