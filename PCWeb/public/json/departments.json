@@ -1,0 +1,28 @@
+{
+  "isSuccess": "200",
+  "msg": "操作成功",
+  "result": {
+    "childDepartments": [
+      {
+        "name": "人力行政部",
+        "id": "150",
+        "parentId": "0",
+        "parentName": "人力行政部"
+      },
+      {
+        "code": "ZNBN",
+        "name": "法务部",
+        "id": "324",
+        "parentId": "0",
+        "parentName": "法务部"
+      }
+    ],
+    "employees": [
+      {
+        "id": "53128111",
+        "name": "雅楠"
+      }
+    ],
+    "titleDepartments": []
+  }
+}

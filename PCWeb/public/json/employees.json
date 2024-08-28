@@ -1,0 +1,39 @@
+{
+  "isSuccess": "200",
+  "msg": "操作成功",
+  "result": {
+    "navigatepageNums": [
+      "1"
+    ],
+    "startRow": "1",
+    "hasNextPage": "false",
+    "prePage": "0",
+    "nextPage": "0",
+    "endRow": "3",
+    "pageSize": "30",
+    "list": [
+      {
+        "name": "111111",
+        "id": 5312
+      },
+      {
+        "name": "东亚-测试",
+        "id": 2515638
+      },
+      {
+        "name": "1111",
+        "id": 2515746
+      }
+    ],
+    "pageNum": "1",
+    "navigatePages": "8",
+    "navigateFirstPage": "1",
+    "total": "3",
+    "pages": "1",
+    "size": "3",
+    "isLastPage": "true",
+    "hasPreviousPage": "false",
+    "navigateLastPage": "1",
+    "isFirstPage": "true"
+  }
+}
