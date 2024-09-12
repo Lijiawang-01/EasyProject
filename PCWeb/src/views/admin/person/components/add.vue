@@ -122,13 +122,3 @@ const close = (ruleFormRef: FormInstance | undefined) => {
 	emits('CloseAdd');
 };
 </script>
-<style lang="scss" scoped>
-.form {
-	min-height: 500px;
-
-	.btn {
-		position: absolute;
-		bottom: 10px;
-	}
-}
-</style>

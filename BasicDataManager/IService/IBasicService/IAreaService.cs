@@ -23,5 +23,6 @@ namespace BusinessManager.IService.IBasicService
 
         PageInfo<BaseAreaRes> GetAreasList(BaseAreaReq req);
         BaseAreaRes GetAreaById(string id);
+        List<SelectResult> GetAreaSelectList(BaseAreaReq req);
     }
 }

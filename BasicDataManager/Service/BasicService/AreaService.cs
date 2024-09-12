@@ -65,10 +65,9 @@ namespace BusinessManager.Service.BasicService
                    Description = u.Description
                ,
                    CreateDate = u.CreateDate
-               }).ToTree(it => it.Children, it => it.ParentId, Guid.Empty);
+               });
 
             var res = exp
-                .OrderBy(p => p.DisplayOrder)
                 .Skip((req.PageIndex - 1) * req.PageSize)
                 .Take(req.PageSize)
                 .ToList();
@@ -76,10 +75,24 @@ namespace BusinessManager.Service.BasicService
             var pageInfo = new PageInfo<BaseAreaRes>(req.PageIndex, req.PageSize, exp.Count(), res);
             return pageInfo;
         }
+        public List<SelectResult> GetAreaSelectList(BaseAreaReq req)
+        {
+            var exp = _db.Queryable<BaseArea>()
+              .WhereIF(!string.IsNullOrEmpty(req.AreaName), u => u.AreaName.Contains(req.AreaName))
+              .WhereIF(!string.IsNullOrEmpty(req.AreaCode), u => u.AreaCode.Contains(req.AreaCode))
+              .OrderBy((u) => u.DisplayOrder)
+              .Select((u) => new SelectResult
+              {
+                  Id = u.Id
+              ,
+                  Name = u.AreaName
+              });
+            return exp.ToList();
+        }
         public BaseAreaRes GetAreaById(string id)
         {
             var info = _db.Queryable<BaseArea>().First(p => p.Id == id);
-            return _mapper.Map<BaseAreaRes>(info); 
+            return _mapper.Map<BaseAreaRes>(info);
         }
     }
 }

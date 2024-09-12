@@ -24,3 +24,9 @@ export const batchDelArea = async (ids: string) => {
   instance.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage['token'];
   return instance.get('/api/Area/BatchDel?ids=' + ids);
 };
+//获取选择下拉列表
+
+export const getAreaDataSelect = async (params: {}) => {
+  instance.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage['token'];
+  return instance.post('/api/Area/GetAreaSelectList', params);
+};

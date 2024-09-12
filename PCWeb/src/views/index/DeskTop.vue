@@ -18,7 +18,7 @@
 		<!-- <BorderBox1 class="container"> Content </BorderBox1> -->
 		<div>
 			<el-input v-model="userid" :disabled="isdisabled" placeholder="输入账号" />
-			<el-input v-model="password" :disabled="isdisabled" placeholder="输入密码" />
+			<el-input v-model="password" :disabled="isdisabled" placeholder="输入密码"  />
 			<el-button type="primary" :disabled="isdisabled" @click="Login">登录</el-button>
 			<div>
 				<ul>
@@ -102,35 +102,3 @@ const SendAll = async () => {
 	await connection.invoke('SendAllMessage', userid.value, sendContent.value); //发送消息
 };
 </script>
-<style lang="scss" scoped>
-.cardContent {
-	width: 100%;
-	margin: 0px auto;
-
-	.box-card {
-		float: left;
-		width: 24%;
-		margin-right: 5px;
-		margin-bottom: 20px;
-	}
-
-	.left,
-	.right {
-		float: left;
-		width: 48%;
-		margin-bottom: 20px;
-	}
-
-	.lineCard {
-		width: 97.5%;
-	}
-
-	.right {
-		margin-left: 20px;
-	}
-	.container {
-		width: 500px;
-		height: 200px;
-	}
-}
-</style>

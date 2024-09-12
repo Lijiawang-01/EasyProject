@@ -175,6 +175,7 @@ const resetForm = (ruleFormRef: FormInstance | undefined) => {
 };
 const addVisible = ref(false);
 const add = () => {
+	info.value = undefined;
 	addVisible.value = true;
 };
 const CloseAdd = () => {
@@ -299,35 +300,3 @@ if (file.value ) {
   }
 };
 </script>
-
-<style lang="scss" scoped>
-.el-pagination {
-	margin-top: 50px;
-}
-
-.cell {
-	text-align: center !important;
-}
-
-.queryTable {
-	width: 500px;
-	border-collapse: collapse;
-
-	tr {
-		height: 50px;
-
-		td {
-			padding: 10px;
-		}
-
-		.left {
-			width: 30%;
-			background-color: #f5f7fa;
-		}
-
-		.right {
-			width: 80%;
-		}
-	}
-}
-</style>

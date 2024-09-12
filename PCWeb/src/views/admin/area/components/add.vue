@@ -5,7 +5,9 @@
 				<el-input v-model="form.areaName" />
 			</el-form-item>
 			<el-form-item label="父级菜单" prop="parentId">
-				<el-tree-select :props="{ value: 'id', label: 'name', children: 'children' }" v-model="form.parentId" :data="treeData" check-strictly />
+				<el-select v-model="form.parentId" clearable filterable >
+					<el-option v-for="item in appAreaList" :key="item.id" :label="item.name" :value="item.id" />
+				</el-select>
 			</el-form-item>
 			<el-form-item label="菜单顺序" prop="order">
 				<el-input v-model="form.order" />
@@ -27,7 +29,7 @@
 
 <script lang="ts" setup>
 import { ref, reactive, defineProps, computed, defineEmits, onMounted, watch } from 'vue';
-import { addArea, editArea, getAreaDataNew } from '@/api/area/areaApi';
+import { addArea, editArea, getAreaDataSelect } from '@/api/area/areaApi';
 import { AreaModel } from '../class/AreaModel';
 import type { FormInstance, FormRules } from 'element-plus';
 import { ElMessage } from 'element-plus';
@@ -62,6 +64,15 @@ watch(
 				isEnable: currInfo.isEnable,
 				description: currInfo.description,
 			};
+		} else {
+			form.value = {
+				id: '',
+				areaName: '',
+				parentId: '',
+				order: 99,
+				isEnable: false,
+				description: '',
+			};
 		}
 	}
 );
@@ -76,6 +87,11 @@ const defaultTreeData = ref([
 		name: '请选择',
 	},
 ]);
+const appAreaList = ref([
+	{
+		id: '',
+		name: '请选择',
+	},]);
 //读取下拉数据
 const treeData = ref();
 onMounted(() => {
@@ -83,16 +99,16 @@ onMounted(() => {
 });
 const LoadMenuData = () => {
 	let parms = {
-		id:'',
+		id: '',
 		AreaName: '',
 		parentId: '',
 		description: '',
 		pageIndex: 1,
 		pageSize: 10,
 	};
-	getAreaDataNew(parms)
+	getAreaDataSelect(parms)
 		.then((res) => {
-			treeData.value = defaultTreeData.value.concat(...res.data);
+			appAreaList.value = res as any;
 		})
 		.catch((err) => {
 			console.log(err);
@@ -138,13 +154,3 @@ const close = (ruleFormRef: FormInstance | undefined) => {
 	emits('CloseAdd');
 };
 </script>
-<style lang="scss" scoped>
-.form {
-	min-height: 500px;
-
-	.btn {
-		position: absolute;
-		bottom: 10px;
-	}
-}
-</style>

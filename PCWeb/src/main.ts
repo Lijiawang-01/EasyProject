@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 import 'element-plus/dist/index.css';
 import './assets/css/global.scss';
+import './assets/css/custom.scss';
 //import DataV, { setClassNamePrefix } from '@dataview/datav-vue3';
 import App from './App.vue';
 import * as ElementPlusIconsVue from '@element-plus/icons-vue';

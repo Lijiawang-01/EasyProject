@@ -95,14 +95,3 @@ const close = () => {
 	emits('CloseSetingRole');
 };
 </script>
-<style lang="scss" scoped>
-.content {
-	min-height: 500px;
-
-	.btn {
-		position: absolute;
-		bottom: 10px;
-		left: 45%;
-	}
-}
-</style>

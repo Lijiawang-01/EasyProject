@@ -24,7 +24,6 @@
 		</template>
 		<el-table :data="tableData" style="width: 100%" ref="multipleTableRef" row-key="id">
 			<el-table-column type="selection" width="55" />
-			<el-table-column label="展开" width="60" />
 			<el-table-column label="时间" width="200">
 				<template #default="scope">
 					<div>
@@ -176,34 +175,3 @@ const handleCurrentChange = (val: number) => {
 	LoadTableData();
 };
 </script>
-<style lang="scss" scoped>
-.el-pagination {
-	margin-top: 50px;
-}
-
-.cell {
-	text-align: center !important;
-}
-
-.queryTable {
-	width: 500px;
-	border-collapse: collapse;
-
-	tr {
-		height: 50px;
-
-		td {
-			padding: 10px;
-		}
-
-		.left {
-			width: 30%;
-			background-color: #f5f7fa;
-		}
-
-		.right {
-			width: 80%;
-		}
-	}
-}
-</style>

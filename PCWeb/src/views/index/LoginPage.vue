@@ -35,7 +35,7 @@
 								<el-input v-model="form.userName" />
 							</el-form-item>
 							<el-form-item label="密码" prop="passWord">
-								<el-input v-model="form.passWord" type="password" show-password />
+								<el-input v-model="form.passWord" type="password" show-password  @keyup.enter="onSubmit(ruleFormRef)" />
 							</el-form-item>
 							<el-form-item>
 								<el-button class="submitBtn" type="primary" @click="onSubmit(ruleFormRef)">登录 </el-button>

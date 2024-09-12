@@ -51,6 +51,23 @@ namespace EasyWechat.WebApi.Controllers.Basic
         /// <param name="req"></param>
         /// <returns></returns>
         [HttpPost]
+        public async Task<ApiResult> GetAreaSelectList(BaseAreaReq req)
+        {
+            var res = Task.Run(() =>
+            {
+                if (string.IsNullOrEmpty(req.ParentId))
+                    req.ParentId = Guid.Empty.ToString();
+                var pageInfo = _AreaService.GetAreaSelectList(req);
+                return ResultHelper.Success(pageInfo);
+            });
+            return await res;
+        }
+        /// <summary>
+        /// 待备注
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
+        [HttpPost]
         public ApiResult Add(BaseAreaReq req)
         {
             //获取当前登录人信息 
