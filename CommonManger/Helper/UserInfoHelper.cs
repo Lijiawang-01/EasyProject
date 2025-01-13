@@ -16,6 +16,10 @@ using System.Threading.Tasks;
 
 namespace CommonManager.Helper
 {
+    /// <summary>
+    /// 跟据token获取用户信息
+    /// 用户信息帮助类
+    /// </summary>
     public static class UserInfoHelper
     {
         //声明一个 IServiceCollection 接口类

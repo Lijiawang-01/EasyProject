@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace CommonManager.Helper
 {
+    /// <summary>
+    /// 反射类
+    /// </summary>
     public class ReflectionClass
     {
         private object m_rowObj = null;

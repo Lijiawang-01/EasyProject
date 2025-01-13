@@ -7,6 +7,9 @@ using RestSharp;
 
 namespace EasyWechatModels.Other
 {
+    /// <summary>
+    /// WebApi返回对象
+    /// </summary>
     public class WebApiResponse
     {
         public string Message { get; set; }
@@ -15,7 +18,10 @@ namespace EasyWechatModels.Other
 
         public object Result { get; set; }
     }
-
+    /// <summary>
+    /// WebApi返回对象
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class WebApiResponse<T>
     {
         public string Message { get; set; }

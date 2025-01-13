@@ -2,6 +2,9 @@
 
 namespace EasyWechatModels.Other
 {
+    /// <summary>
+    /// 自定义从库连接字符串
+    /// </summary>
     public class CustomSlaveConnectionString : SlaveConnectionConfig
     {
         private int _CustomHitRate;

@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 
 namespace CommonManager.Base
 {
+    /// <summary>
+    /// 服务基类接口
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public interface IBaseService<T>
     {
         /// <summary>

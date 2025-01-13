@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace CommonManager.SwaggerExtend
 {
+    /// <summary>
+    /// 跨域注册方法
+    /// </summary>
     public static class CorsExt
     {
         /// <summary>

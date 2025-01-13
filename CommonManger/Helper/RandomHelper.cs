@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CommonManager.Helper
 {
+    /// <summary>
+    /// 随机数帮助类
+    /// </summary>
     public class RandomHelper
     {
         //验证验证码

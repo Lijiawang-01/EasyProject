@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace CommonManager.Cache
 {
+    /// <summary>
+    /// Redis缓存
+    /// </summary>
     public class RedisCache : IRedisCache
     {
         private readonly IDatabase _database;

@@ -10,6 +10,9 @@ using static EasyWechatModels.Enum.CacheEnum;
 
 namespace CommonManager.Cache
 {
+    /// <summary>
+    /// 内存缓存
+    /// </summary>
     public class MemoryCache : IMemoryCache
     {
         readonly IDistributedCache _cache;

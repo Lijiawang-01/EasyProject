@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace CommonManager.Helper
 {
+    /// <summary>
+    /// 读取配置文件
+    /// </summary>
     public class AppSettingHelper
     {
         private static IConfiguration _config;

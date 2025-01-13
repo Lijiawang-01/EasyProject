@@ -4,18 +4,28 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EasyWechat.WebApi.Controllers.Basic
 {
+    /// <summary>
+    /// 微信控制器
+    /// </summary>
     [Route("api/[controller]/[action]")]
     [ApiController]
     [ApiExplorerSettings(GroupName = nameof(ApiVersionInfo.WeChat))]
     public class WechatController : ControllerBase
     {
         private string imgPath = "C:\\Users\\Administrator\\OneDrive\\图片";
+        /// <summary>
+        /// 菜单栏
+        /// </summary>
         public class TooBar
         {
             public string name { get; set; }
             public string url { get; set; }
             public int id { get; set; }
         }
+        /// <summary>
+        /// 获取菜单栏图片
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public List<TooBar> GetTooBarsImg()
         {
@@ -26,6 +36,11 @@ namespace EasyWechat.WebApi.Controllers.Basic
             }
             return list;
         }
+        /// <summary>
+        /// 获取图片
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult GetImage(int id)
         {
@@ -43,6 +58,10 @@ namespace EasyWechat.WebApi.Controllers.Basic
                 return NotFound();
             }
         }
+        /// <summary>
+        /// 获取菜单栏
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public List<TooBar> GetTooBars()
         {

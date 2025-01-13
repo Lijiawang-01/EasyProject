@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace CommonManager.SwaggerExtend
 {
+    /// <summary>
+    /// Swagger扩展注册
+    /// </summary>
     public static class SwaggerExtentions
     {
         /// <summary>

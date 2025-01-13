@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace CommonManager.Utity
 {
+    /// <summary>
+    /// AutoMapper配置映射
+    /// </summary>
     public class AutoMapperConfig : Profile
     {
         public AutoMapperConfig()

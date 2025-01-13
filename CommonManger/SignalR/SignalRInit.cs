@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace CommonManager.SignalR
 {
+    /// <summary>
+    /// 注册SignalR
+    /// </summary>
     public static class SignalRInit
     {
         public static void AddSignalRSetup(this IServiceCollection services)

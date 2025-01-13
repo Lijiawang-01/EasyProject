@@ -10,6 +10,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EasyWechat.WebApi.Controllers.Basic
 {
+    /// <summary>
+    /// 区域管理
+    /// </summary>
     [ApiController]
     [Route("api/[controller]/[action]")]
     [ApiExplorerSettings(GroupName = nameof(ApiVersionInfo.System))]
@@ -18,7 +21,7 @@ namespace EasyWechat.WebApi.Controllers.Basic
         public IAreaService _AreaService { get; set; }
 
         /// <summary>
-        /// 待备注
+        /// 跟据id获取区域信息
         /// </summary>
         /// <param name="req"></param>
         /// <returns></returns>
@@ -29,7 +32,7 @@ namespace EasyWechat.WebApi.Controllers.Basic
             return ResultHelper.Success(userInfo);
         }
         /// <summary>
-        /// 待备注
+        /// 获取区域列表
         /// </summary>
         /// <param name="req"></param>
         /// <returns></returns>
@@ -46,7 +49,7 @@ namespace EasyWechat.WebApi.Controllers.Basic
             return await res;
         }
         /// <summary>
-        /// 待备注
+        /// 获取区域下拉列表
         /// </summary>
         /// <param name="req"></param>
         /// <returns></returns>
@@ -63,31 +66,29 @@ namespace EasyWechat.WebApi.Controllers.Basic
             return await res;
         }
         /// <summary>
-        /// 待备注
+        /// 添加区域
         /// </summary>
         /// <param name="req"></param>
         /// <returns></returns>
         [HttpPost]
         public ApiResult Add(BaseAreaReq req)
         {
-            //获取当前登录人信息 
             bool isAdd = _AreaService.Add(req);
             return ResultHelper.Success(isAdd);
         }
         /// <summary>
-        /// 待备注
+        /// 修改区域
         /// </summary>
         /// <param name="req"></param>
         /// <returns></returns>
         [HttpPost]
         public ApiResult Edit(BaseAreaReq req)
         {
-            //获取当前登录人信息
             bool isEdit = _AreaService.Edit(req);
             return ResultHelper.Success(isEdit);
         }
         /// <summary>
-        /// 待备注
+        /// 删除区域
         /// </summary>
         /// <param name="req"></param>
         /// <returns></returns>
@@ -98,7 +99,7 @@ namespace EasyWechat.WebApi.Controllers.Basic
             return ResultHelper.Success(isDel);
         }
         /// <summary>
-        /// 待备注
+        /// 批量删除区域
         /// </summary>
         /// <param name="req"></param>
         /// <returns></returns>

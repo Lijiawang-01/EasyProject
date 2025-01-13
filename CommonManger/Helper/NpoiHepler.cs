@@ -12,6 +12,9 @@ using System.Threading.Tasks;
 
 namespace CommonManager.Helper
 {
+    /// <summary>
+    /// Npoi帮助类
+    /// </summary>
     public class NpoiHepler
     {
         public class KeyValue

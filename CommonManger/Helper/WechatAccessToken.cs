@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace CommonManager.Helper
 {
+    /// <summary>
+    /// 微信AccessToken
+    /// </summary>
     public static class WechatAccessToken
     {
         private static string _appId;

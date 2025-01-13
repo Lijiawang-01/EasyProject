@@ -1,5 +1,8 @@
 ﻿namespace CommonManager.Helper
 {
+    /// <summary>
+    /// 日志帮助类
+    /// </summary>
     public class LogHelper
     {
         private static readonly log4net.ILog LInfo = log4net.LogManager.GetLogger("LogInfo");

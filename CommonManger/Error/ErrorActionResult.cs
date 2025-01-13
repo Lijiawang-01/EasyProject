@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CommonManager.Error
 {
+    /// <summary>
+    /// 错误返回结果对象
+    /// </summary>
     public class ErrorActionResult
     {
         public string? SuccesDesc { get; set; }

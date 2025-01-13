@@ -5,7 +5,7 @@
 				<el-input v-model="form.areaName" />
 			</el-form-item>
 			<el-form-item label="父级菜单" prop="parentId">
-				<el-select v-model="form.parentId" clearable filterable >
+				<el-select v-model="form.parentId" clearable filterable>
 					<el-option v-for="item in appAreaList" :key="item.id" :label="item.name" :value="item.id" />
 				</el-select>
 			</el-form-item>
@@ -28,7 +28,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive, defineProps, computed, defineEmits, onMounted, watch } from 'vue';
+import { ref, reactive, computed, defineEmits, onMounted, watch } from 'vue';
 import { addArea, editArea, getAreaDataSelect } from '@/api/area/areaApi';
 import { AreaModel } from '../class/AreaModel';
 import type { FormInstance, FormRules } from 'element-plus';
@@ -38,7 +38,7 @@ const props = defineProps({
 	addVisible: Boolean,
 	info: AreaModel,
 });
-let isVisible = computed(() => props.addVisible);
+const isVisible = ref(props.addVisible);
 const form = ref({
 	id: props.info?.id,
 	areaName: '',
@@ -52,17 +52,17 @@ const rules = reactive<FormRules>({
 });
 //监听
 watch(
-	() => props.info,
+	() => props,
 	(newInfo) => {
-		if (newInfo != undefined) {
-			let currInfo: AreaModel = JSON.parse(newInfo as any) as AreaModel;
+		isVisible.value = newInfo.addVisible;
+		if (newInfo.info != undefined) {
 			form.value = {
-				id: currInfo.id,
-				areaName: currInfo.areaName,
-				parentId: currInfo.parentId,
-				order: currInfo.order,
-				isEnable: currInfo.isEnable,
-				description: currInfo.description,
+				id: newInfo.info.id,
+				areaName: newInfo.info.areaName,
+				parentId: newInfo.info.parentId,
+				order: newInfo.info.displayOrder,
+				isEnable: newInfo.info.isEnable,
+				description: newInfo.info.description,
 			};
 		} else {
 			form.value = {
@@ -74,7 +74,7 @@ watch(
 				description: '',
 			};
 		}
-	}
+	},{deep:true}
 );
 //defineEmits用于定义回调事件，里面是数组，可以定义多个事件
 const emits = defineEmits(['CloseAdd']);

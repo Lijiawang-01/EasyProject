@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace EasyWechatModels.Enum
 {
+    /// <summary>
+    /// 缓存枚举
+    /// </summary>
     public class CacheEnum
     {
         public enum ExpireType

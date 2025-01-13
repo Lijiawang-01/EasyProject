@@ -7,7 +7,7 @@ using SqlSugar;
 namespace EasyWechatModels.Entitys
 {
     ///<summary>
-    ///
+    /// 元素表
     ///</summary>
     [SugarTable("Base_Element")]
     public partial class BaseElement : IEntity

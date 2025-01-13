@@ -9,13 +9,15 @@
 					<el-form-item> </el-form-item>
 					<el-form-item>
 						<el-button type="primary" @click="onSubmit(ruleFormRef)">
-							<el-icon> <search /> </el-icon>查询
+							<el-icon>
+								<search />
+							</el-icon>查询
 						</el-button>
 						<el-button @click="resetForm(ruleFormRef)">
 							<el-icon> <refresh-right /> </el-icon>重置
 						</el-button>
 					</el-form-item>
-					<el-form-item style="float: right;"> 
+					<el-form-item style="float: right;">
 						<el-button type="primary" @click="add">新增</el-button>
 						<el-button type="danger" @click="Del">删除</el-button>
 					</el-form-item>
@@ -54,7 +56,9 @@
 				</template>
 			</el-table-column>
 		</el-table>
-		<el-pagination background layout="prev, pager, next" :total="form.total" @current-change="handleCurrentChange" />
+		<el-pagination background layout=" prev, pager, next, jumper,total, sizes" :total="form.total" v-model:page-size="form.pageSize"
+		v-model:current-page="form.pageIndex"  @size-change="handleSizeChange" :page-sizes="[10, 20, 30, 40]"
+			@current-change="handleCurrentChange" />
 	</el-card>
 
 	<addVue :addVisible="addVisible" :info="info" @CloseAdd="CloseAdd"></addVue>
@@ -104,6 +108,7 @@ const resetForm = (ruleFormRef: FormInstance | undefined) => {
 const addVisible = ref(false);
 const add = () => {
 	addVisible.value = true;
+	info.value = undefined;
 };
 const CloseAdd = () => {
 	addVisible.value = false;
@@ -112,7 +117,7 @@ const CloseAdd = () => {
 };
 const info = ref();
 const handleEdit = (_index: number, row: AreaModel) => {
-	info.value = JSON.stringify(row);
+	info.value =row;
 	addVisible.value = true;
 };
 
@@ -172,6 +177,10 @@ const LoadTableData = async () => {
 //分页
 const handleCurrentChange = (val: number) => {
 	form.pageIndex = val;
+	LoadTableData();
+};//分页
+const handleSizeChange = (val: number) => {
+	form.pageSize = val;
 	LoadTableData();
 };
 </script>

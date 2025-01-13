@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace CommonManager.Helper
 {
+    /// <summary>
+    /// 返回结果帮助类
+    /// </summary>
     public class ResultHelper
     {
         public static ApiResult Success(object res)

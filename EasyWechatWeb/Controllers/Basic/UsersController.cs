@@ -8,15 +8,21 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EasyWechat.WebApi.Controllers.Basic
 {
+    /// <summary>
+    /// 用户管理
+    /// </summary>
     [ApiController]
     [Route("api/[controller]/[action]")]
     [ApiExplorerSettings(GroupName = nameof(ApiVersionInfo.User))]
     public class UsersController : BaseController
     {
+        /// <summary>
+        /// 用户服务
+        /// </summary>
         public IUserService _UserService { get; set; }
 
         /// <summary>
-        /// 待备注
+        /// 获取用户列表
         /// </summary>
         /// <param name="req"></param>
         /// <returns></returns>
@@ -28,9 +34,9 @@ namespace EasyWechat.WebApi.Controllers.Basic
             return ResultHelper.Success(pageInfo);
         }
         /// <summary>
-        /// 待备注
+        /// 跟据id获取用户信息
         /// </summary>
-        /// <param name="req"></param>
+        /// <param name="id">用户id</param>
         /// <returns></returns>
         [HttpGet]
         public ApiResult GetUsersById(string id)
@@ -39,31 +45,9 @@ namespace EasyWechat.WebApi.Controllers.Basic
             return ResultHelper.Success(userInfo);
         }
         /// <summary>
-        /// 待备注
+        /// 新增用户
         /// </summary>
-        /// <param name="req"></param>
-        /// <returns></returns>
-        [HttpGet]
-        public ApiResult GetUsersById2()
-        {
-            //var userInfo = _UserService.GetUsersRoleById(id);
-            return ResultHelper.Error("s",500);
-        }
-        /// <summary>
-        /// 待备注
-        /// </summary>
-        /// <param name="req"></param>
-        /// <returns></returns>
-        [HttpGet]
-        public ApiResult GetUsersById3()
-        {
-            //var userInfo = _UserService.GetUsersRoleById(id);
-            return ResultHelper.Success("成功");
-        }
-        /// <summary>
-        /// 待备注
-        /// </summary>
-        /// <param name="req"></param>
+        /// <param name="req">用户信息</param>
         /// <returns></returns>
         [HttpPost]
         public ApiResult Add(BaseUsersReq req)
@@ -74,9 +58,9 @@ namespace EasyWechat.WebApi.Controllers.Basic
             return ResultHelper.Success(isAdd);
         }
         /// <summary>
-        /// 待备注
+        /// 编辑用户
         /// </summary>
-        /// <param name="req"></param>
+        /// <param name="req">用户信息</param>
         /// <returns></returns>
         [HttpPost]
         public ApiResult Edit(BaseUsersReq req)
@@ -87,9 +71,9 @@ namespace EasyWechat.WebApi.Controllers.Basic
             return ResultHelper.Success(isEdit);
         }
         /// <summary>
-        /// 待备注
+        /// 删除用户
         /// </summary>
-        /// <param name="req"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
         public ApiResult Del(string id)
@@ -98,9 +82,9 @@ namespace EasyWechat.WebApi.Controllers.Basic
             return ResultHelper.Success(isDel);
         }
         /// <summary>
-        /// 待备注
+        /// 批量删除用户
         /// </summary>
-        /// <param name="req"></param>
+        /// <param name="ids"></param>
         /// <returns></returns>
         [HttpGet]
         public ApiResult BatchDel(string ids)
@@ -109,9 +93,10 @@ namespace EasyWechat.WebApi.Controllers.Basic
             return ResultHelper.Success(isDel);
         }
         /// <summary>
-        /// 待备注
+        /// 设置用户角色
         /// </summary>
-        /// <param name="req"></param>
+        /// <param name="pid">用户Id</param>
+        /// <param name="rids">角色id</param>
         /// <returns></returns>
         [HttpGet]
         public ApiResult SettingRole(string pid, string rids)
@@ -120,9 +105,10 @@ namespace EasyWechat.WebApi.Controllers.Basic
             return ResultHelper.Success(isSet);
         }
         /// <summary>
-        /// 待备注
+        /// 修改用户的昵称和密码
         /// </summary>
-        /// <param name="req"></param>
+        /// <param name="nickName"></param>
+        /// <param name="password"></param>
         /// <returns></returns>
         [HttpGet]
         public ApiResult EditNickNameOrPassword(string nickName, string? password)

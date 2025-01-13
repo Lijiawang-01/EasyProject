@@ -151,7 +151,7 @@ namespace EasyWechat.WebApi.Controllers.Basic
             return res;
         }
         /// <summary>
-        /// datafirst
+        /// datafirst测试
         /// </summary>
         /// <returns></returns>
         [HttpGet]

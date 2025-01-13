@@ -4,6 +4,9 @@ using System.Reflection;
 
 namespace CommonManager.Utity
 {
+    /// <summary>
+    /// 查询条件帮助类
+    /// </summary>
     public static class PageParamHelper
     {
         public static Expression<Func<TSource, bool>> GetIndividualPropertySearch<TSource>(PageParam pageObj)

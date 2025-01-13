@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace CommonManager.Error
 {
+    /// <summary>
+    /// 防止访问特定目录中间件
+    /// </summary>
     public class PreventAccessToDirectoryMiddleware
     {
         private readonly RequestDelegate _next;

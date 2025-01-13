@@ -9,9 +9,12 @@ using System.Threading.Tasks;
 
 namespace CommonManager.Base
 {
+    /// <summary>
+    /// 基础控制器
+    /// </summary>
     [ApiController]
     [Route("api/[controller]/[action]")]
-    [CustomerActionFilter]
+    [CustomerActionFilter]    
     public class BaseController : ControllerBase
     {
     }

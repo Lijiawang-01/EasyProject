@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace CommonManager.Utity
 {
+    /// <summary>
+    /// AutoFac初始化类
+    /// </summary>
     public static class AutofacInit
     {
         private static IContainer _container;

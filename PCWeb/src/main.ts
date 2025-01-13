@@ -28,6 +28,13 @@ app.use(router);
 app.use(i18n);
 app.use(ElementPlus);
 //app.use(DataV, { classNamePrefix: 'dv-' });
+// 仅在生产环境中禁用警告
+if (process.env.NODE_ENV === 'production') {
+  app.config.warnHandler = () => {
+    // 忽略警告，不输出到控制台
+  };
+}
+
 app.mount('#app');
 
 app.component('nodeWrap', nodeWrap); //初始化组件

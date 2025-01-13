@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace EasyWechatModels.Other
 {
+    /// <summary>
+    /// 分页参数
+    /// </summary>
     public class PageParam
     {
         public int PageIndex { get; set; } = 1;

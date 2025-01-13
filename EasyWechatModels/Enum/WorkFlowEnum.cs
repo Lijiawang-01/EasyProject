@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace EasyWechatModels.Enum
 {
+    /// <summary>
+    /// 工作流枚举
+    /// </summary>
     public class WorkFlowEnum
     {
         /// <summary>

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CommonManager.Helper
 {
+    /// <summary>
+    /// 日期帮助类
+    /// </summary>
     public class DateHelper
     {
         /// <summary>

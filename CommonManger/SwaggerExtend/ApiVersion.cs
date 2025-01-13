@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CommonManager.SwaggerExtend
 {
+    /// <summary>
+    /// SwaggerApi版本信息
+    /// </summary>
     public class ApiVersionInfo
     {
         public static string Basic;

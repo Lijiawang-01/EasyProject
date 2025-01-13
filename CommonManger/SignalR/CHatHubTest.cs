@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace CommonManager.SignalR
 {
+    /// <summary>
+    /// 继承Hub类，实现SignalR的服务端测试
+    /// </summary>
     public class ChatHubTest : Hub
     {
         private static Dictionary<string, string> dicUsers = new Dictionary<string, string>();

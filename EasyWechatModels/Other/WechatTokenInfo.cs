@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace EasyWechatModels.Other
 {
+    /// <summary>
+    /// 微信token信息
+    /// </summary>
     public class WechatTokenInfo
     {
         public string access_token { get; set; }

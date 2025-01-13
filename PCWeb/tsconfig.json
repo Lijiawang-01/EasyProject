@@ -26,7 +26,9 @@
 			"@/*": [
 				"src/*" // 解决vite配置别名，ts不识别的问题
 			]
-		}
+		},
+		//禁用警告
+		"noImplicitAny": false,
 	},
 	"include": ["src/**/*"],
 	"exclude": ["node_modules", "dist"],

@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace CommonManager.Utity
 {
+    /// <summary>
+    /// Castle实现AOP拦截
+    /// </summary>
     public class CustomerInterceptor : IInterceptor
     {
         private static Dictionary<string, object> _dic = new Dictionary<string, object>();

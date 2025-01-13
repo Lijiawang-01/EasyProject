@@ -1,8 +1,11 @@
 export class AreaModel {
   id: string = '';
   areaName: string = '';
-  parentId: string = '';
-  order: number = 99;
+  areaCode: string = '';
+  parentId: any = null;
+  displayOrder: number = 0;
   isEnable: boolean = false;
-  description: string = '';
+  description:any = null;
+  pageIndex: number = 1;
+  pageSize: number = 10;
 }

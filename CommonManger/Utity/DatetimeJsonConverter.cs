@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace CommonManager.Utity
 {
+    /// <summary>
+    ///MVC格式化日期时间格式
+    ///需要自己创建指定的转换类DatetimeJsonConverter
+    /// </summary>
     public class DatetimeJsonConverter : JsonConverter<DateTime>
     {
         public override DateTime Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)

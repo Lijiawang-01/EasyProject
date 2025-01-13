@@ -10,6 +10,13 @@ namespace CommonManager.Utity
 {
     public class CustomeInterceptorSelector : IInterceptorSelector
     {
+        /// <summary>
+        /// Castle选择拦截器
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="method"></param>
+        /// <param name="interceptors"></param>
+        /// <returns></returns>
         public IInterceptor[] SelectInterceptors(Type type, MethodInfo method, IInterceptor[] interceptors)
         {
             //return interceptors;

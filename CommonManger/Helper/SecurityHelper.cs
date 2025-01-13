@@ -10,11 +10,20 @@ using System.Web;
 
 namespace CommonManager.Helper
 {
+    /// <summary>
+    /// 安全帮助类
+    /// </summary>
     public class SecurityHelper
     {
         public static string QuotePriceKey = "easy_QuotePriceEncryption";
 
         public static readonly string publicKey = "easy_CookieEncryption";
+        /// <summary>
+        /// 特殊字符替换
+        /// </summary>
+        /// <param name="sourceStr"></param>
+        /// <param name="check"></param>
+        /// <returns></returns>
         public static string SafeHtmlFragment(string sourceStr, bool check = true)
         {
             if (check)
@@ -49,6 +58,12 @@ namespace CommonManager.Helper
 
             return sub.ToString();
         }
+        /// <summary>
+        /// Url加密
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="isVery"></param>
+        /// <returns></returns>
         public static string UrlEncrypt(string url, bool isVery = true)
         {
             string text = "3E2DC7AC-32B6-4574-9BD2-A8B242D31AA8";
@@ -108,7 +123,12 @@ namespace CommonManager.Helper
 
             return result;
         }
-
+        /// <summary>
+        /// DES加密
+        /// </summary>
+        /// <param name="encryptValue"></param>
+        /// <param name="key"></param>
+        /// <returns></returns>
         public static string EncryptString(string encryptValue, string key)
         {
             string text = "加密出错!";
@@ -142,7 +162,13 @@ namespace CommonManager.Helper
 
             return Convert.ToBase64String(memoryStream.ToArray());
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="len"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public static string SplitStringLen(string s, int len, char b)
         {
             if (string.IsNullOrEmpty(s))
@@ -156,7 +182,12 @@ namespace CommonManager.Helper
             }
             return s.PadLeft(len, b);
         }
-
+        /// <summary>
+        /// 3DES加密
+        /// </summary>
+        /// <param name="Text"></param>
+        /// <param name="sKey"></param>
+        /// <returns></returns>
         public static string Encrypt(string Text, string sKey)
         {
             DESCryptoServiceProvider dESCryptoServiceProvider = new DESCryptoServiceProvider();
@@ -184,7 +215,13 @@ namespace CommonManager.Helper
 
             return stringBuilder.ToString();
         }
-
+        /// <summary>
+        /// 3DES加密
+        /// </summary>
+        /// <param name="encryptValue"></param>
+        /// <param name="key"></param>
+        /// <param name="base64Flag"></param>
+        /// <returns></returns>
         public static string QuoteEncryptString(string encryptValue, string key, bool base64Flag = true)
         {
             byte[] bytes = Encoding.UTF8.GetBytes(encryptValue);
@@ -205,7 +242,13 @@ namespace CommonManager.Helper
             text = BitConverter.ToString(array2);
             return text.Replace("-", "");
         }
-
+        /// <summary>
+        /// 3DES解密
+        /// </summary>
+        /// <param name="decryptString"></param>
+        /// <param name="key"></param>
+        /// <param name="base64Flag"></param>
+        /// <returns></returns>
         public static string QuoteDecryptString(string decryptString, string key, bool base64Flag = true)
         {
             byte[] bytes = Encoding.UTF8.GetBytes(SplitStringLen(key, 24, '0'));

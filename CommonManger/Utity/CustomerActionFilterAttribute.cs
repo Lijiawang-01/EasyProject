@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 namespace CommonManager.Utity
 {
     /// <summary>
+    /// Attribute实现IActionFilter接口
     /// 0、先执行控制器的构造函数
     /// 1、执行OnActionExecuting
     /// 2、执行Action方法-

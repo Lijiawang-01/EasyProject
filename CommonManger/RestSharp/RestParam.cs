@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CommonManager.RestSharp
 {
+    /// <summary>
+    /// RestSharp请求参数
+    /// </summary>
     public class RestParam
     {
         public string Key { get; set; }

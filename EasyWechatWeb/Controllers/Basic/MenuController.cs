@@ -49,7 +49,7 @@ namespace EasyWechat.WebApi.Controllers.Basic
             return ResultHelper.Success(isEdit);
         }
         /// <summary>
-        /// 待备注
+        /// 删除
         /// </summary>
         /// <param name="req"></param>
         /// <returns></returns>
@@ -61,7 +61,7 @@ namespace EasyWechat.WebApi.Controllers.Basic
             return ResultHelper.Success(isDel);
         }
         /// <summary>
-        /// 待备注
+        /// 批量删除
         /// </summary>
         /// <param name="req"></param>
         /// <returns></returns>
@@ -73,7 +73,7 @@ namespace EasyWechat.WebApi.Controllers.Basic
             return ResultHelper.Success(isDel);
         }
         /// <summary>
-        /// 待备注
+        /// 获取菜单列表
         /// </summary>
         /// <param name="req"></param>
         /// <returns></returns>
@@ -90,7 +90,7 @@ namespace EasyWechat.WebApi.Controllers.Basic
             return await res;
         }
         /// <summary>
-        /// 待备注
+        /// 给角色设置菜单
         /// </summary>
         /// <param name="req"></param>
         /// <returns></returns>
@@ -101,7 +101,7 @@ namespace EasyWechat.WebApi.Controllers.Basic
             return ResultHelper.Success(isSetMenu);
         }
         /// <summary>
-        /// 待备注
+        /// 跟据当前登录用户获取菜单
         /// </summary>
         /// <param name="req"></param>
         /// <returns></returns>

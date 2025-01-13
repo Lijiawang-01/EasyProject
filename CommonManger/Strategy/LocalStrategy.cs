@@ -9,6 +9,11 @@ namespace CommonManager.Strategy
 {
     public class LocalStrategy : FileStrategy
     {
+        /// <summary>
+        /// 上传到本地服务器
+        /// </summary>
+        /// <param name="files"></param>
+        /// <returns></returns>
         public override Task<string> UploadFile(List<IFormFile> files)
         {
             var list = new List<string>();

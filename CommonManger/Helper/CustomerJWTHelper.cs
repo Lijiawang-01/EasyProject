@@ -11,6 +11,10 @@ using System.Text;
 
 namespace CommonManager.Helper
 {
+    /// <summary>
+    /// JWT帮助类
+    /// 注意配置JWTTokenOptions
+    /// </summary>
     public class CustomerJWTHelper
     {
         private readonly IJsonSerializer _jsonSerializer;

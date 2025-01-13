@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace EasyWechatModels.Other
 {
+    /// <summary>
+    /// JWTToken配置
+    /// </summary>
     public class JWTTokenOptions
     {
         public string? Audience

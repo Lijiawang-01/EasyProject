@@ -11,7 +11,10 @@ using System.Threading.Tasks;
 
 namespace CommonManager.RestSharp
 {
-    public  class HttpRestClient
+    /// <summary>
+    /// RestSharp封装
+    /// </summary>
+    public class HttpRestClient
     {
         /// <summary>
         /// POST方法

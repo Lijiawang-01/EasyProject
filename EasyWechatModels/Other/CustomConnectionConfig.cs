@@ -2,6 +2,9 @@
 
 namespace EasyWechatModels.Other
 {
+    /// <summary>
+    /// 从库连接配置
+    /// </summary>
     public class CustomConnectionConfig
     {
         public CustomConnectionConfig()

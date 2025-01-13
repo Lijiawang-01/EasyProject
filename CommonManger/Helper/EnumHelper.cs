@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace CommonManager.Helper
 {
+    /// <summary>
+    /// 枚举帮助类
+    /// </summary>
     public static class EnumHelper
     {
         public static Array GetValues(Type enumType)

@@ -12,6 +12,9 @@ using System.Threading.Tasks;
 
 namespace CommonManager.SignalR
 {
+    /// <summary>
+    /// SignalR聊天帮助类
+    /// </summary>
     public class ChatHelper : IHostedService
     {
         private readonly IHubContext<ChatHub> _hubContext;

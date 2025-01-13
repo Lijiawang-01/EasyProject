@@ -11,6 +11,10 @@ using System.Threading.Tasks;
 
 namespace CommonManager.SqlSugar
 {
+    /// <summary>
+    /// SqlSugar初始化
+    /// 注意配置MasterSlaveConnectionStrings；IsWriteLog
+    /// </summary>
     public static class SqlSugarInit
     {
         public static void AddSqlsugarSetup(this IServiceCollection services)

@@ -8,7 +8,7 @@ using static EasyWechatModels.Enum.CacheEnum;
 namespace CommonManager.Cache
 {
     /// <summary>
-    /// 缓存接口,提供一些Cache接口方法
+    /// 内存缓存接口
     /// </summary>
     public interface IMemoryCache
     {

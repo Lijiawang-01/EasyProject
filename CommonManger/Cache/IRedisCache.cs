@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 namespace CommonManager.Cache
 {
 
+    /// <summary>
+    /// Redis缓存接口
+    /// </summary>
     public interface IRedisCache
     {
         /// <summary>

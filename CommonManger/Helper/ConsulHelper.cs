@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace CommonManager.Helper
 {
+    /// <summary>
+    /// Consul注册
+    /// 注意配置ConsulServiceAddress；WebApiPort；ConsulHealthUrl
+    /// </summary>
     public static class ConsulHelper
     {
         public static void ConsulRegist(this IConfiguration configuration, string name = "EpsConsulService")

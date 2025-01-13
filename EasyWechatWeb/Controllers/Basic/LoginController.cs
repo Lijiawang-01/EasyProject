@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace EasyWechat.WebApi.Controllers.Basic
 {
     /// <summary>
-    /// 1用户登录
+    /// 用户登录
     /// </summary>
     [ApiController]
     [Route("api/[controller]/[action]")]
@@ -26,7 +26,6 @@ namespace EasyWechat.WebApi.Controllers.Basic
         [HttpGet]
         public async Task<ApiResult> GetToken(string name, string password)
         {
-
             var res = Task.Run(() =>
             {
                 if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(password))

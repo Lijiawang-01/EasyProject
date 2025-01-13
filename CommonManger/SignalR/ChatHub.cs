@@ -14,6 +14,9 @@ using System.Threading.Tasks;
 
 namespace CommonManager.SignalR
 {
+    /// <summary>
+    /// 聊天室
+    /// </summary>
     public class ChatHub : Hub
     {
         /// <summary>

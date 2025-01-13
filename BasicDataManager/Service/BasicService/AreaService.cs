@@ -50,20 +50,13 @@ namespace BusinessManager.Service.BasicService
                .OrderBy((u) => u.DisplayOrder)
                .Select((u) => new BaseAreaRes
                {
-                   Id = u.Id
-               ,
-                   AreaName = u.AreaName
-               ,
-                   AreaCode = u.AreaCode
-               ,
-                   ParentId = u.ParentId
-               ,
-                   DisplayOrder = u.DisplayOrder
-               ,
-                   IsEnable = u.IsEnable
-               ,
-                   Description = u.Description
-               ,
+                   Id = u.Id,
+                   AreaName = u.AreaName,
+                   AreaCode = u.AreaCode,
+                   ParentId = u.ParentId,
+                   DisplayOrder = u.DisplayOrder,
+                   IsEnable = u.IsEnable,
+                   Description = u.Description,
                    CreateDate = u.CreateDate
                });
 

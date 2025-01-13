@@ -15,7 +15,7 @@ namespace EasyWechat.WebApi.Controllers.Basic
     {
         public IRoleService _RoleService { get; set; }
         /// <summary>
-        /// 待备注
+        /// 获取角色列表
         /// </summary>
         /// <param name="req"></param>
         /// <returns></returns>
@@ -26,7 +26,7 @@ namespace EasyWechat.WebApi.Controllers.Basic
             return ResultHelper.Success(pageInfo);
         }
         /// <summary>
-        /// 待备注
+        /// 获取角色详情
         /// </summary>
         /// <param name="req"></param>
         /// <returns></returns>
@@ -37,7 +37,7 @@ namespace EasyWechat.WebApi.Controllers.Basic
             return ResultHelper.Success(role);
         }
         /// <summary>
-        /// 待备注
+        /// 添加角色
         /// </summary>
         /// <param name="req"></param>
         /// <returns></returns>
@@ -50,7 +50,7 @@ namespace EasyWechat.WebApi.Controllers.Basic
             return ResultHelper.Success(isAdd);
         }
         /// <summary>
-        /// 待备注
+        /// 修改角色
         /// </summary>
         /// <param name="req"></param>
         /// <returns></returns>
@@ -63,7 +63,7 @@ namespace EasyWechat.WebApi.Controllers.Basic
             return ResultHelper.Success(isEdit);
         }
         /// <summary>
-        /// 待备注
+        /// 删除角色
         /// </summary>
         /// <param name="req"></param>
         /// <returns></returns>
@@ -75,7 +75,7 @@ namespace EasyWechat.WebApi.Controllers.Basic
             return ResultHelper.Success(isDel);
         }
         /// <summary>
-        /// 待备注
+        /// 批量删除角色
         /// </summary>
         /// <param name="req"></param>
         /// <returns></returns>
