@@ -1,0 +1,79 @@
+
+.cardContent {
+	width: 100%;
+	margin: 0px auto;
+
+	.box-card {
+		float: left;
+		width: 24%;
+		margin-right: 5px;
+		margin-bottom: 20px;
+	}
+
+	.left,
+	.right {
+		float: left;
+		width: 48%;
+		margin-bottom: 20px;
+	}
+
+	.lineCard {
+		width: 97.5%;
+	}
+
+	.right {
+		margin-left: 20px;
+	}
+	.container {
+		width: 500px;
+		height: 200px;
+	}
+}
+.el-pagination {
+	margin-top: 50px;
+	float: right;
+	margin-bottom: 50px;
+}
+
+.cell {
+	text-align: center !important;
+}
+
+.queryTable {
+	width: 500px;
+	border-collapse: collapse;
+
+	tr {
+		height: 50px;
+
+		td {
+			padding: 10px;
+		}
+
+		.left {
+			width: 30%;
+			background-color: #f5f7fa;
+		}
+
+		.right {
+			width: 80%;
+		}
+	}
+}
+.form {
+	min-height: 500px;
+
+	.btn {
+		position: absolute;
+		bottom: 10px;
+	}
+}
+.content {
+	min-height: 500px;
+
+	.btn {
+		position: absolute;
+		bottom: 10px;
+		left: 45%;
+	}
+}
