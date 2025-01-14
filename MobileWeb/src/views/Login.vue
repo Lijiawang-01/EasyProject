@@ -4,12 +4,12 @@
 	<!-- /导航栏 -->
 	<div class="login-container">
 		<!-- 登录表单 -->
-		<van-form @submit="onSubmit" ref="form">
-			<van-field v-model="username" name="username" label="用户名" placeholder="用户名" :rules="[{ required: true, message: '请填写用户名' }]" />
+		<van-form @submit="onSubmit" >
+			<van-field v-model="form.userName" name="userName" label="用户名" placeholder="用户名" :rules="[{ required: true, message: '请填写用户名' }]" />
 			<van-field
-				v-model="password"
+				v-model="form.passWord"
 				type="password"
-				name="password"
+				name="passWord"
 				label="密码"
 				placeholder="密码"
 				:rules="[{ required: true, message: '请填写密码' }]"
@@ -23,16 +23,28 @@
 </template>
 <script setup lang="ts">
 import router from '@/router';
-import { ref } from 'vue';
+import { ref ,reactive} from 'vue';
 import { useI18n } from 'vue-i18n'; // 多语言
+import { getToken } from '@/api/login/loginApi';
 
 const { t } = useI18n(); // t方法取出，t('code')使用
 const username = ref('');
 const password = ref('');
-const form = ref();
+const form =  reactive({
+	userName: '',
+	passWord: '',
+});
 
 const onSubmit = (values: any) => {
-	console.log('submit', values);
+	getToken(form.userName, form.passWord)
+				.then(async (res) => {
+					const token = res as any as string;
+					localStorage['token'] = token;
+					console.log(token);
+				})
+				.catch((err) => {
+					console.log(err);
+				});
 	router.push('/index');
 };
 </script>

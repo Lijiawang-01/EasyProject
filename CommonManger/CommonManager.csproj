@@ -30,4 +30,8 @@
     <ProjectReference Include="..\EasyWechatModels\EasyWechatModels.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="WeChat\" />
+  </ItemGroup>
+
 </Project>

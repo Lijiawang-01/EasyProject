@@ -1,4 +1,5 @@
-﻿using CommonManager.SwaggerExtend;
+﻿using CommonManager.Helper;
+using CommonManager.SwaggerExtend;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,7 +13,7 @@ namespace EasyWechat.WebApi.Controllers.Basic
     [ApiExplorerSettings(GroupName = nameof(ApiVersionInfo.WeChat))]
     public class WechatController : ControllerBase
     {
-        private string imgPath = "C:\\Users\\Administrator\\OneDrive\\图片";
+        private string imgPath = AppSettingHelper.ReadAppSettings("ImgPath").ToString();
         /// <summary>
         /// 菜单栏
         /// </summary>

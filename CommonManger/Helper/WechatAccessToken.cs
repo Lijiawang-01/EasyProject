@@ -22,14 +22,16 @@ namespace CommonManager.Helper
 
         public static string GetAccessToken(string appId, string appSecret)
         {
-            if (string.IsNullOrEmpty(_accessToken) && _expiresIn > DateTime.Now)
+            _appId = appId;
+            _appSecret = appSecret;
+            if (string.IsNullOrEmpty(_accessToken))
             {
-                string tokenUrl = $"https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={_appId}&secret={_appSecret}";
+                string tokenUrl = $"https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={appId}&secret={appSecret}";
                 var result = HttpRestClient.HttpGet(tokenUrl, "");
                 var tokenInfo = JsonHelper.ToObject<WechatTokenInfo>(result);
-                if (tokenInfo.errcode != "")
+                if (!string.IsNullOrEmpty(tokenInfo.errcode))
                     return tokenInfo.errcode;
-                var dt = DateTime.Now.AddMonths(tokenInfo.expires_in - 300);
+                var dt = DateTime.Now.AddMilliseconds(tokenInfo.expires_in - 300);
                 _expiresIn = dt;
                 _accessToken = tokenInfo.access_token;
             }
