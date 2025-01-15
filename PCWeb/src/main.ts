@@ -11,8 +11,6 @@ import piniaPlugPersist from 'pinia-plugin-persist';
 import ElementPlus from 'element-plus';
 import i18n from './local/i18n';
 import store from '@/store';
-import addNode from '@/components/workflow/addNode.vue';
-import nodeWrap from '@/components/workflow/nodeWrap.vue';
 const app = createApp(App);
 
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
@@ -37,5 +35,3 @@ if (process.env.NODE_ENV === 'production') {
 
 app.mount('#app');
 
-app.component('nodeWrap', nodeWrap); //初始化组件
-app.component('addNode', addNode); //初始化组件

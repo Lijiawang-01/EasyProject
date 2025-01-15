@@ -33,7 +33,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, defineProps, computed, defineEmits, onMounted } from 'vue';
+import { ref,computed,onMounted } from 'vue';
 import { Role } from '@/views/admin/role/class/Role';
 import { getRoleData, settingRole } from '@/api/role/roleApi';
 import type { ElTable } from 'element-plus';

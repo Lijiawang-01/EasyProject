@@ -28,7 +28,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive, computed, defineEmits, onMounted, watch } from 'vue';
+import { ref, reactive, computed,  onMounted, watch } from 'vue';
 import { addArea, editArea, getAreaDataSelect } from '@/api/area/areaApi';
 import { AreaModel } from '../class/AreaModel';
 import type { FormInstance, FormRules } from 'element-plus';

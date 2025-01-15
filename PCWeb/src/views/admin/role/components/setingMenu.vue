@@ -12,7 +12,7 @@
 	</el-dialog>
 </template>
 <script lang="ts" setup>
-import { ref, defineProps, computed, defineEmits, onMounted, toRaw } from 'vue';
+import { ref, computed, onMounted, toRaw } from 'vue';
 import { getMenuDataNew, settingMenu } from '@/api/menu/menuApi';
 import { ElMessage, ElTreeV2 } from 'element-plus';
 const props = defineProps({

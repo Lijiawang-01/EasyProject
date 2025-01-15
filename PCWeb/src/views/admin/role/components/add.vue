@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive, defineProps, computed, defineEmits, watch } from 'vue';
+import { ref, reactive,  computed,  watch } from 'vue';
 import { addRole, editRole } from '@/api/role/roleApi';
 import { Role } from '../class/Role';
 import type { FormInstance, FormRules } from 'element-plus';

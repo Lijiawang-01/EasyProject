@@ -26,12 +26,12 @@ export default defineConfig({
     open: true,
     proxy: {
       '/api': {
-        target: 'http://localhost:7016/api',
+        target: 'http://localhost:5000/api',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
       '/ChatHubApi': {
-        target: 'http://127.0.0.1:7016',
+        target: 'http://127.0.0.1:5000',
         ws: true,  //代理websockets
         changeOrigin: true, // 虚拟的站点需要更管origin
       }

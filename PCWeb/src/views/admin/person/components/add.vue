@@ -29,7 +29,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive, defineProps, computed, defineEmits, watch } from 'vue';
+import { ref, reactive,  computed,  watch } from 'vue';
 import { addUsers, editUsers } from '@/api/user/userApi';
 import { PersonModel } from '../class/PersonModel';
 import { ElMessage } from 'element-plus';

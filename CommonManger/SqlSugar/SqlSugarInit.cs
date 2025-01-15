@@ -43,6 +43,7 @@ namespace CommonManager.SqlSugar
                 };
                 id++;
                 configList.Add(config);
+                LogHelper.Info(config.ToJson());
             }
             services.AddScoped<ISqlSugarClient>(o =>
             {

@@ -274,7 +274,7 @@ namespace CommonManager.Init
                 app.Configuration.ConsulRegist();
             }
             #endregion
-            app.Urls.Add(configuration["ApplicationUrl"].ToString());
+            //app.Urls.Add(configuration["ApplicationUrl"].ToString());
             app.Run();
         }
     }

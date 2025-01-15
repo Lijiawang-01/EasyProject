@@ -10,7 +10,7 @@ function loadComponent(url: string) {
 }
 // 处理路由所需格式
 export const generateRouter = (userRouters: any[]) => {
-  let newRouter = null
+  let newRouter: any[] = []
   const routes: any[] = []
   if (userRouters)
     newRouter = userRouters.map((i) => {

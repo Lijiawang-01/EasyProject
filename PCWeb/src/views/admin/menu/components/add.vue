@@ -32,7 +32,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive, defineProps, computed, defineEmits, onMounted, watch } from 'vue';
+import { ref, reactive,computed,  onMounted, watch } from 'vue';
 import { addMenu, editMenu, getMenuDataNew } from '@/api/menu/menuApi';
 import { MenuModel } from '../class/MenuModel';
 import type { FormInstance, FormRules } from 'element-plus';
