@@ -3,6 +3,7 @@ import axios from 'axios';
 import { ElMessage } from 'element-plus';
 //创建一个axios实例
 const instance = axios.create({
+  baseURL: import.meta.env.VITE_API_BASE_URL,
   headers: {
     // 'content-type': 'application/json',
     "content-type": "application/json;charset=UTF-8"
