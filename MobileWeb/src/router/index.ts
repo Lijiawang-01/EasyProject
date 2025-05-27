@@ -20,31 +20,34 @@ const routes: Array<RouteRecordRaw> = [
         component: Index
       },
       {
-        name: 'Wash',
-        path: 'wash',
-        component: () => import('../views/Wash.vue')
+        path: '/classify',
+        component: () => import('@/views/Classify.vue')
       },
       {
-        name: 'Order',
-        path: 'order',
-        component: () => import('../views/Order.vue')
+        path: '/classify/:id',
+        component: () => import('@/views/ClassifyDetail.vue')
+      },
+      {
+        name: 'cart',
+        path: 'cart',
+        component: () => import('@/views/Cart.vue')
       },
       {
         name: 'My',
         path: 'my',
-        component: () => import('../views/My.vue')
+        component: () => import('@/views/My.vue')
       }
     ]
   },
   {
     name: 'Login',
     path: '/login',
-    component: () => import('../views/Login.vue')
+    component: () => import('@/views/Login.vue')
   },
   {
     name: "404",
     path: "/:pathMatch(.*)*",
-    component: () => import('../views/404.vue')
+    component: () => import('@/views/404.vue')
   }
 ]
 

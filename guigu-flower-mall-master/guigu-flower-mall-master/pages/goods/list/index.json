@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "商品列表",
+  "usingComponents": {
+    "goods-card": "/components/goods-card/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-button": "@vant/weapp/button/index",
+    "load-more": "/components/load-more/index"
+  }
+}

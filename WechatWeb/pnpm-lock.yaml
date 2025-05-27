@@ -1,0 +1,48 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@vant/weapp':
+        specifier: ^1.10.12
+        version: 1.11.7
+      mobx-miniprogram:
+        specifier: ^4.13.2
+        version: 4.13.2
+      mobx-miniprogram-bindings:
+        specifier: ^2.1.5
+        version: 2.1.5(mobx-miniprogram@4.13.2)
+
+packages:
+
+  '@types/wechat-miniprogram@3.4.8':
+    resolution: {integrity: sha512-lOqddA707X3SZxVhlZNBZPzYzj7lG/ED2fF30k+aE2oT6R4wfw0Wiup2k2hGrmzYUFyJXfGs01sDCuJMhQMAdg==}
+
+  '@vant/weapp@1.11.7':
+    resolution: {integrity: sha512-Rwn9BBnb4kHSV4XmvBicwtd42J+amEUfnFDcXJsGNPNX4a9c/DoT6YLsm4X1wB2+sQbdiQsbFBLAvGRBxCkD8g==}
+
+  mobx-miniprogram-bindings@2.1.5:
+    resolution: {integrity: sha512-2HuiQL5FPgoYJ8XIMdw5iD6XT61LtsujaGyizbN845iZcsLmrKZiF0dKd4jQTSuC/6rGozqqhcy0sDc7qcpjYQ==}
+    peerDependencies:
+      mobx-miniprogram: ^4.0.0
+
+  mobx-miniprogram@4.13.2:
+    resolution: {integrity: sha512-C3HtkqHCLKp35N2gXA80yFD6PNfSqwioPFmnjTQpBLrEqYm1F6yiWZ57CW+8FqgmR306mw6ZfsM5q7hSTHw8BQ==}
+
+snapshots:
+
+  '@types/wechat-miniprogram@3.4.8': {}
+
+  '@vant/weapp@1.11.7': {}
+
+  mobx-miniprogram-bindings@2.1.5(mobx-miniprogram@4.13.2):
+    dependencies:
+      '@types/wechat-miniprogram': 3.4.8
+      mobx-miniprogram: 4.13.2
+
+  mobx-miniprogram@4.13.2: {}

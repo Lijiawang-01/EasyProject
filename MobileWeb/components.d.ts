@@ -7,6 +7,8 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    BannerSwiper: typeof import('./src/components/BannerSwiper.vue')['default']
+    ProductCard: typeof import('./src/components/ProductCard.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     VanArea: typeof import('vant/es')['Area']
@@ -32,12 +34,15 @@ declare module 'vue' {
     VanRadio: typeof import('vant/es')['Radio']
     VanRadioGroup: typeof import('vant/es')['RadioGroup']
     VanRate: typeof import('vant/es')['Rate']
+    VanSearch: typeof import('vant/es')['Search']
     VanShareSheet: typeof import('vant/es')['ShareSheet']
     VanSlider: typeof import('vant/es')['Slider']
     VanStep: typeof import('vant/es')['Step']
     VanStepper: typeof import('vant/es')['Stepper']
     VanSteps: typeof import('vant/es')['Steps']
+    VanSwipe: typeof import('vant/es')['Swipe']
     VanSwipeCell: typeof import('vant/es')['SwipeCell']
+    VanSwipeItem: typeof import('vant/es')['SwipeItem']
     VanSwitch: typeof import('vant/es')['Switch']
     VanTabbar: typeof import('vant/es')['Tabbar']
     VanTabbarItem: typeof import('vant/es')['TabbarItem']

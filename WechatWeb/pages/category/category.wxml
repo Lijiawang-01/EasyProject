@@ -1,0 +1,7 @@
+<!--logs.wxml-->
+<view class="container wrap">
+  <goods-category
+    category="{{list}}"
+    bind:changeCategory="onChange"
+  />
+</view>
