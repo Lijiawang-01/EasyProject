@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="RestSharp" Version="110.2.0" />
-    <PackageReference Include="SqlSugarCore" Version="5.1.4.152" />
+    <PackageReference Include="RestSharp" Version="112.1.0" />
+    <PackageReference Include="SqlSugarCore" Version="5.1.4.197" />
   </ItemGroup>
 
   <ItemGroup>

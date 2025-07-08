@@ -1,6 +1,4 @@
 using BusinessManager.IService.IBasicService;
-using CommonManager.Helper;
-using CommonManager.SwaggerExtend;
 using EasyWechatModels.Other;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,6 +18,7 @@ namespace EasyWechatWebApi.Controllers.Buz
         /// <returns></returns>
         [HttpGet]
         [ApiExplorerSettings(GroupName = nameof(ApiVersionInfo.Basic))]
+
         public string HelloWord()
         {
             return "Hello Word!";

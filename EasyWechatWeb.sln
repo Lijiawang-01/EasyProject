@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessManager", "BasicDat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyWechatModels", "EasyWechatModels\EasyWechatModels.csproj", "{C3EEADAF-4E1A-467D-B1E0-D99E2AF602EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{EBAA0F20-2F6A-4B1C-A502-FD5872D2AC4D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{C3EEADAF-4E1A-467D-B1E0-D99E2AF602EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3EEADAF-4E1A-467D-B1E0-D99E2AF602EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3EEADAF-4E1A-467D-B1E0-D99E2AF602EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBAA0F20-2F6A-4B1C-A502-FD5872D2AC4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBAA0F20-2F6A-4B1C-A502-FD5872D2AC4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBAA0F20-2F6A-4B1C-A502-FD5872D2AC4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBAA0F20-2F6A-4B1C-A502-FD5872D2AC4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

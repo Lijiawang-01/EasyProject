@@ -33,7 +33,7 @@ namespace CommonManager.RestSharp
             var getwayURL = AppSettingHelper.ReadAppSettings("GetWayURL");
             var client = new RestClient(getwayURL + "/" + apiName + "/" + serviceName + "/" + methodName);
             var request = new RestRequest();
-            request.Timeout = -1;
+            //request.Timeout = -1;
             request.Method = Method.Post;
             request.AddHeader("Content-Type", "application/json");
             request.AddJsonBody(requestBody);
@@ -52,7 +52,7 @@ namespace CommonManager.RestSharp
         {
             var client = new RestClient(url);
             var request = new RestRequest();
-            request.Timeout = -1;
+            //request.Timeout = -1;
             request.Method= Method.Post;
             request.AddHeader("Content-Type", "application/json");
             request.AddJsonBody(requestBody);
@@ -70,7 +70,7 @@ namespace CommonManager.RestSharp
         {
             var client = new RestClient(url);
             var request = new RestRequest();
-            request.Timeout = -1;
+            //request.Timeout = -1;
             request.Method = Method.Post;
             request.AddHeader("Content-Type", "application/json");
             request.AddHeader("Authorization", token);
@@ -89,7 +89,7 @@ namespace CommonManager.RestSharp
 
             var client = new RestClient(url);
             var request = new RestRequest();
-            request.Timeout = -1;
+            //request.Timeout = -1;
             request.Method = Method.Get;
             var body = @"";
             request.AddParameter("text/plain", body, ParameterType.RequestBody);
@@ -114,7 +114,7 @@ namespace CommonManager.RestSharp
 
             var client = new RestClient(url);
             var request = new RestRequest();
-            request.Timeout = -1;
+            //request.Timeout = -1;
             request.Method = Method.Get;
             var body = @"";
             request.AddParameter("text/plain", body, ParameterType.RequestBody);

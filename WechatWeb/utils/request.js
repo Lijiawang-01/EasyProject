@@ -8,7 +8,7 @@
  */
 
 // 公共的请求地址
-const apiUrl = 'https://gmall-prod.atguigu.cn';
+const apiUrl = 'https://gmall-prod.atguigu.cn/';
 
 /**
  * @description: 封装微信请求方法
