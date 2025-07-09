@@ -37,7 +37,6 @@ namespace EasyWechat.WebApi.Controllers.Basic
             var obj2 = _userService.GetById(1);
             var str = AppSettingHelper.ReadAppSettings("Test", "A");
             SessionHelper.SetSession("ces", "as");
-            var str2 = _memoryCache.GetCache<string>("ss");
             return "OK";
         }
         /// <summary>

@@ -103,6 +103,7 @@ namespace TestProject
             serviceCollection.AddAutoMapper(typeof(AutoMapperConfig));
             #endregion
             //实例化 AutoFac  容器  使用反射获取所有实现接口的类注入DI容器
+            //实例化Autofac容器
             var containerBuilder = new ContainerBuilder();
             #region autofac+Castle
             {
@@ -127,17 +128,12 @@ namespace TestProject
                         .PropertiesAutowired();
                 }
                 #endregion
-                // 获取到 Autofac 的容器,静态调用方法
-                containerBuilder.RegisterBuildCallback(container =>
-                {
-                    var _container = (IContainer)container;
-                    AutofacInit.InitContainer(_container);
-                });
-
             }
+            //将services中的服务填充到Autofac 的容器中
             containerBuilder.Populate(serviceCollection);
             #endregion
             //使用已进行的组件登记创建新容器
+            //第三方IoC容器接管Core内置DI容器 
             var ApplicationContainer = containerBuilder.Build();
             return ApplicationContainer;
         }

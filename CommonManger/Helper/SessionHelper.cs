@@ -15,18 +15,24 @@ namespace CommonManager.Helper
     /// </summary>
     public class SessionHelper
     {
-        //声明一个 IServiceCollection 接口类
-        public static IServiceCollection? serviceCollection;
-        //获取到 HttpContext  对象
-        public static HttpContext Current
+        private static IHttpContextAccessor _httpContextAccessor;
+
+        public static void Configure(IHttpContextAccessor httpContextAccessor)
         {
-            get
-            {
-                object factory = serviceCollection.BuildServiceProvider().GetService(typeof(IHttpContextAccessor));
-                HttpContext context = ((IHttpContextAccessor)factory).HttpContext;
-                return context;
-            }
+            _httpContextAccessor = httpContextAccessor;
         }
+        //声明一个 IServiceCollection 接口类
+        //public static IServiceCollection? serviceCollection;
+        ////获取到 HttpContext  对象
+        //public static HttpContext Current
+        //{
+        //    get
+        //    {
+        //        object factory = serviceCollection.BuildServiceProvider().GetService(typeof(IHttpContextAccessor));
+        //        HttpContext context = ((IHttpContextAccessor)factory).HttpContext;
+        //        return context;
+        //    }
+        //}
         /// <summary>
         /// 根据session名获取session对象
         /// </summary>
@@ -34,8 +40,8 @@ namespace CommonManager.Helper
         /// <returns></returns>
         public static string GetSession(string name)
         {
-            var obj= Current.Session.GetString(name);
-            if(obj == null)
+            var obj = _httpContextAccessor?.HttpContext?.Session.GetString(name);
+            if (obj == null)
             {
                 return "";
             }
@@ -48,8 +54,8 @@ namespace CommonManager.Helper
         /// <param name="val">session 值</param>
         public static void SetSession(string name, string val)
         {
-            Current.Session.Remove(name);
-            Current.Session.SetString(name, val);
+            _httpContextAccessor?.HttpContext?.Session.Remove(name);
+            _httpContextAccessor?.HttpContext?.Session.SetString(name, val);
         }
     }
 }

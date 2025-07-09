@@ -22,18 +22,24 @@ namespace CommonManager.Helper
     /// </summary>
     public static class UserInfoHelper
     {
-        //声明一个 IServiceCollection 接口类
-        public static IServiceCollection? serviceCollection;
-        //获取到 HttpContext  对象
-        public static HttpContext Current
+        private static IHttpContextAccessor _httpContextAccessor;
+
+        public static void Configure(IHttpContextAccessor httpContextAccessor)
         {
-            get
-            {
-                object factory = serviceCollection.BuildServiceProvider().GetService(typeof(IHttpContextAccessor));
-                HttpContext context = ((IHttpContextAccessor)factory).HttpContext;
-                return context;
-            }
+            _httpContextAccessor = httpContextAccessor;
         }
+        ////声明一个 IServiceCollection 接口类
+        //public static IServiceCollection? serviceCollection;
+        ////获取到 HttpContext  对象
+        //public static HttpContext Current
+        //{
+        //    get
+        //    {
+        //        object factory = serviceCollection.BuildServiceProvider().GetService(typeof(IHttpContextAccessor));
+        //        HttpContext context = ((IHttpContextAccessor)factory).HttpContext;
+        //        return context;
+        //    }
+        //}
         /// <summary>
         /// 当前身份缓存对象
         /// </summary>
@@ -46,7 +52,7 @@ namespace CommonManager.Helper
         public static BaseUsersRes GetCurUserInfo()
         {
             var result = new BaseUsersRes();
-            var claims = Current.User.Claims.ToList();
+            var claims = _httpContextAccessor?.HttpContext?.User.Claims.ToList();
             var userId = claims.Where(x => x.Type == "id").FirstOrDefault()?.Value;
             var nickName = claims.Where(x => x.Type == "nickName").FirstOrDefault()?.Value;
             var name = claims.Where(x => x.Type == "name").FirstOrDefault()?.Value;
