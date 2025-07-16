@@ -106,6 +106,163 @@ EasyWechatWeb 是一个基于 ASP.NET Core 6.0 的分层 WebAPI 项目，采用 
 - 统一异常处理与日志记录（可在中间件扩展）。
 - 支持异步编程模式。
 
+---
+
+
+## PCWeb
+
+PCWeb 是基于 Vue 3 + TypeScript + Vite 的企业级后台管理系统前端项目，集成了丰富的组件和工具，适合中大型管理后台开发。
+
+### 主要技术栈
+
+- **Vue 3**：渐进式前端框架
+- **TypeScript**：类型安全的 JavaScript 超集
+- **Vite**：极速前端构建工具
+- **Element Plus**：UI 组件库
+- **Pinia**：新一代状态管理
+- **Vue Router**：前端路由
+- **Axios**：HTTP 请求库
+- **ECharts**：数据可视化
+- **WangEditor**：富文本编辑器
+- **@vue-office**：Office 文档预览
+- **Day.js**：日期处理
+- **SignalR**：实时通信
+- **Prettier / ESLint / Stylelint**：代码风格与质量保障
+- **Sass / Less**：CSS 预处理
+- **Vite Plugin Compression**：打包压缩
+
+### 常用命令
+
+
+```shell
+# 本地开发
+npm run dev
+
+# 生产构建
+npm run build
+
+# 预览构建产物
+npm run preview
+
+# 代码格式化
+npm run format
+
+# 代码检查
+npm run lint:eslint
+npm run lint:style
+
+```
+
+---
+
+## MobileWeb
+
+MobileWeb 是基于 Vue 3 + TypeScript + Vite + Vant 的移动端项目，适合移动端业务开发，支持多语言、状态持久化等特性。
+
+### 主要技术栈
+
+- **Vue 3**：渐进式前端框架
+- **TypeScript**：类型安全的 JavaScript 超集
+- **Vite**：极速前端构建工具
+- **Vant 4**：移动端组件库
+- **Pinia**：新一代状态管理
+- **Vue Router**：前端路由
+- **Axios**：HTTP 请求库
+- **Day.js**：日期处理
+- **SignalR**：实时通信
+- **reset-css**：样式重置
+- **PostCSS px-to-viewport**：移动端适配
+- **Prettier / ESLint / Stylelint**：代码风格与质量保障
+- **Sass / Less**：CSS 预处理
+
+### 常用命令
+
+
+```shell
+# 本地开发
+npm run dev
+
+# 生产构建
+npm run build
+
+# 预览构建产物
+npm run preview
+
+```
+---
+# WechatWeb 小程序前端
+
+## 项目简介
+
+WechatWeb 是基于微信小程序生态开发的鲜花电商项目，适用于微信小程序平台。项目集成了 Vant Weapp 组件库、mobx 状态管理等主流技术，支持 npm 构建和模块化开发。
+
+## 主要技术栈
+
+- **微信小程序原生开发**
+- **Vant Weapp**：高质量小程序 UI 组件库
+- **mobx-miniprogram**：响应式状态管理
+- **mobx-miniprogram-bindings**：mobx 与小程序数据自动绑定
+- **npm 构建**：支持模块化依赖管理
+
+## 快速开始
+
+1. **安装依赖**
+
+   
+```
+   npm install
+   
+```
+
+2. **微信开发者工具构建 npm**
+
+   - 打开微信开发者工具，导入项目根目录
+   - 执行 `工具 -> 构建 npm`
+
+3. **配置 appid**
+
+   - 打开 `project.config.json`，将 `appid` 替换为你自己的小程序 appid
+
+4. **配置服务器白名单**
+
+   - 在微信小程序后台 `开发/开发管理/开发设置/服务器域名`，添加后端接口域名
+
+## 目录结构
+
+
+```
+WechatWeb/
+├── miniprogram/         # 小程序主目录
+├── package.json         # npm 依赖配置
+├── project.config.json  # 小程序项目配置
+├── README.md            # 项目说明
+└── ...                  # 其他文件
+
+```
+
+## 常用命令
+
+
+```
+# 安装依赖
+npm install
+
+# 构建 npm 包（在微信开发者工具中操作）
+# 工具 -> 构建 npm
+
+```
+
+## 相关文档
+
+- [微信小程序官方文档](https://developers.weixin.qq.com/miniprogram/dev/framework/)
+- [Vant Weapp 文档](https://vant-contrib.gitee.io/vant-weapp/#/home)
+- [mobx-miniprogram 文档](https://github.com/wuba/mobx-miniprogram)
+
+---
+## 开源协议
+
+本项目基于 MIT 协议开源，欢迎学习和参与贡献。
 ## 贡献与反馈
 
 如有建议或问题，欢迎提交 Issue 或 Pull Request。
+以下是根据 PCWeb 和 MobileWeb 下的 package.json 自动生成的 README.md，分别介绍了两端的技术栈和启动方式：
