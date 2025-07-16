@@ -19,6 +19,8 @@ namespace CommonManager.Helper
     /// <summary>
     /// 跟据token获取用户信息
     /// 用户信息帮助类
+    /// 在var app = builder.Build();下面使用UserInfoHelper.Configure(app.Services.GetRequiredService<IHttpContextAccessor>());
+    /// 或者在builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>()后面使用  services.AddTransient<ICurrentUser, CurrentUser>();;
     /// </summary>
     public static class UserInfoHelper
     {

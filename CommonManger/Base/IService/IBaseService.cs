@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace CommonManager.Base
 {
     /// <summary>
-    /// 服务基类接口
+    /// 通用仓储实现 服务基类接口
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public interface IBaseService<T>
@@ -265,5 +265,35 @@ namespace CommonManager.Base
         /// <param name="orderDescSelector">排序字段</param>
         /// <returns></returns>
         PageInfo<T> GetPageData(Expression<Func<T, bool>> whereExpression, int intPageIndex, int intPageSize, Expression<Func<T, object>> orderDescSelector = null);
+
+        /// <summary>
+        /// 当前db
+        /// </summary>
+        void CurrentBeginTran();
+
+        /// <summary>
+        /// 当前db
+        /// </summary>
+        void CurrentCommitTran();
+
+        /// <summary>
+        /// 当前db
+        /// </summary>
+        void CurrentRollbackTran();
+
+        /// <summary>
+        /// 所有db
+        /// </summary>
+        void BeginTran();
+
+        /// <summary>
+        /// 所有db
+        /// </summary>
+        void CommitTran();
+
+        /// <summary>
+        /// 所有db
+        /// </summary>
+        void RollbackTran();
     }
 }

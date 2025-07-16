@@ -121,8 +121,8 @@ namespace CommonManager.Init
             #region 方法一 使用Helper
             //注册mapper
             //初始化 AutoMapper 配置，通过AutoMapperConfig类定义对象映射规则，并将配置注册为单例，方便全局使用对象映射（如 DTO 与实体类的转换）
-            var config = new MapperConfiguration(e => e.AddProfile(new AutoMapperConfig()));
-            builder.Services.AddSingleton(config);
+            //var config = new MapperConfiguration(e => e.AddProfile(new AutoMapperConfig()));
+            //builder.Services.AddSingleton(config);
             //注册mapper映射
             builder.Services.AddAutoMapper(typeof(AutoMapperConfig));
             #endregion

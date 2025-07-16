@@ -1,4 +1,5 @@
 ﻿using BusinessManager.IService.IBasicService;
+using BusinessManager.Service.BasicService;
 using CommonManager.Base.IService;
 using CommonManager.Base.Service;
 using CommonManager.Cache;

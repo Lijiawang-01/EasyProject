@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace CommonManager.Base
 {
+    //通用仓储实现
     //表示T必须是引用类型（而不是int等值类型，或者ValueType的其他子类），new()表示这个类型T还必须至少具备一个无参的构造函数（还可以有其他有参数的构造函数）。
     public class BaseService<T> : IBaseService<T> where T : class, new()
     {
@@ -478,6 +479,54 @@ namespace CommonManager.Base
             var basePage = new PageInfo<T>(intPageIndex, intPageSize, totalCount, results);
 
             return basePage;
+        }
+
+        /// <summary>
+        /// 当前db
+        /// </summary>
+        public void CurrentBeginTran()
+        {
+            _db.Ado.BeginTran();
+        }
+
+        /// <summary>
+        /// 当前db
+        /// </summary>
+        public void CurrentCommitTran()
+        {
+            _db.Ado.CommitTran();
+        }
+
+        /// <summary>
+        /// 当前db
+        /// </summary>
+        public void CurrentRollbackTran()
+        {
+            _db.Ado.RollbackTran();
+        }
+
+        /// <summary>
+        /// 所有db
+        /// </summary>
+        public void BeginTran()
+        {
+            _db.AsTenant().BeginTran();
+        }
+
+        /// <summary>
+        /// 所有db
+        /// </summary>
+        public void CommitTran()
+        {
+            _db.AsTenant().CommitTran();
+        }
+
+        /// <summary>
+        /// 所有db
+        /// </summary>
+        public void RollbackTran()
+        {
+            _db.AsTenant().RollbackTran();
         }
     }
 }
